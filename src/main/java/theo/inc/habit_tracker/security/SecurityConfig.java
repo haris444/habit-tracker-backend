@@ -47,8 +47,10 @@ public class SecurityConfig {
     @Bean
     public UrlBasedCorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
-        configuration.setAllowedOrigins(Arrays.asList("https://theo-habit-tracker.netlify.app")); // Your frontend origin
-        configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Allow preflight
+        configuration.setAllowedOrigins(Arrays.asList(
+            "https://theo-habit-tracker.netlify.app", 
+            "http://localhost:3000"  // Added for local development
+        ));         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS")); // Allow preflight
         configuration.setAllowedHeaders(Arrays.asList("*")); // Allow all headers
         configuration.setAllowCredentials(true); // For JWT
         configuration.setMaxAge(3600L); // Cache preflight for 1 hour
