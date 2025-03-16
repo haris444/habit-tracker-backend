@@ -7,7 +7,6 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
-import theo.inc.habit_tracker.model.Habit;
 
 import java.util.ArrayList;
 import java.util.List;
